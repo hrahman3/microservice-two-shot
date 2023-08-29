@@ -65,3 +65,17 @@ def api_shoes(request, bin_vo_id=None):
             encoder=ShoeDetailEncoder,
             safe=False,
         )
+
+
+@require_http_methods(["GET", "DELETE"])
+def api_shoe(request, pk):
+    if request.method == "GET":
+        shoe = Shoe.objects.get(id=pk)
+        return JsonResponse(
+            {"shoe": shoe},
+            encoder=ShoeDetailEncoder,
+            safe=False,
+        )
+    else:
+        count, _ = Shoe.objects.filter(id=pk).delete()
+        return JsonResponse({"deleted": count > 0})
