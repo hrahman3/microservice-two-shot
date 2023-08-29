@@ -3,14 +3,13 @@
 Team:
 
 * Person 1 - Which microservice?
-* Person 2 - Which microservice?
+* Francis Belza - Shoes microservice
 
 ## Design
 
 ## Shoes microservice
 
-Explain your models and integration with the wardrobe
-microservice, here.
+Create a Shoe model with these fields: manufacturer, model name, color, photo_url, and bin. I will then build a poller so the shoes microservice can communicate with the wardobe API.
 
 ## Hats microservice
 
