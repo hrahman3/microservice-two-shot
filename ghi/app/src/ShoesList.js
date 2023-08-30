@@ -35,7 +35,7 @@ function ShoesList() {
           <th>Manufacturer</th>
           <th>Model</th>
           <th>Color</th>
-          <th>Photo URL</th>
+          <th>Photo</th>
           <th>Bin</th>
           <th>Delete</th>
         </tr>
@@ -47,7 +47,9 @@ function ShoesList() {
               <td>{ shoe.manufacturer }</td>
               <td>{ shoe.model_name }</td>
               <td>{ shoe.color }</td>
-              <td>{ shoe.picture_url }</td>
+              <td>
+                <img src={ shoe.picture_url } alt={`${shoe.manufacturer} ${shoe.model_name} in ${shoe.color}`} style={{ width: '100px' }} />
+              </td>
               <td>{ shoe.bin }</td>
               <td>
                 <button onClick={() => handleDelete(shoe)}>Delete</button>
