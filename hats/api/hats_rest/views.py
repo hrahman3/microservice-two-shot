@@ -21,7 +21,13 @@ class LocationVODetailEncoder(ModelEncoder):
 
 class HatListEncoder(ModelEncoder):
     model = Hat
-    properties = ["style_name"]
+    properties = [
+        "image_url",
+        "style_name",
+        "color",
+        "fabric",
+        "location",
+        ]
 
     def get_extra_data(self, o):
         return {"location": o.location.closet_name}
