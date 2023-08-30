@@ -1,5 +1,5 @@
 from django.db import models
-# from django.urls import reverse
+from django.urls import reverse
 
 # Create your models here.
 class LocationVO(models.Model):
@@ -23,3 +23,12 @@ class Hat(models.Model):
         related_name="hats",
         on_delete=models.CASCADE,
     )
+
+    def __str__(self):
+        return f"{self.color} {self.style_name}"
+
+    def get_api_url(self):
+        return reverse("api_hat_detail", kwargs={"pk": self.pk})
+
+    class Meta:
+        ordering = ("style_name", "fabric", "color", "image_url", "location")
