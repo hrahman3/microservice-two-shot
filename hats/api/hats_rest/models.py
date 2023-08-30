@@ -16,7 +16,7 @@ class Hat(models.Model):
     fabric = models.CharField(max_length=200)
     style_name = models.CharField(max_length=200)
     color = models.CharField(max_length=200)
-    image_url = models.URLField()
+    image_url = models.URLField(max_length=200)
 
     location = models.ForeignKey(
         LocationVO,
