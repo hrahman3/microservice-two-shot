@@ -10,7 +10,19 @@ function ShoesList() {
       const data = await response.json();
       setShoes(data.shoes)
     }
-  }
+  };
+
+
+  const handleDelete = async (shoeToDelete) => {
+    const response = await fetch(`http://localhost:8080/api/shoes/${shoeToDelete.id}`, {
+        method: 'DELETE',
+    });
+
+    if (response.ok) {
+        setShoes(prevShoes => prevShoes.filter(shoe => shoe.id !== shoeToDelete.id))
+    }
+  };
+
 
   useEffect(()=>{
     getData()
@@ -25,6 +37,7 @@ function ShoesList() {
           <th>Color</th>
           <th>Photo URL</th>
           <th>Bin</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -36,6 +49,9 @@ function ShoesList() {
               <td>{ shoe.color }</td>
               <td>{ shoe.picture_url }</td>
               <td>{ shoe.bin }</td>
+              <td>
+                <button onClick={() => handleDelete(shoe)}>Delete</button>
+              </td>
             </tr>
           );
         })}

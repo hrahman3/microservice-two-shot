@@ -19,7 +19,8 @@ class ShoeListEncoder(ModelEncoder):
         "manufacturer",
         "model_name",
         "color",
-        "picture_url"
+        "picture_url",
+        "id"
         ]
 
     def get_extra_data(self, o):
@@ -33,6 +34,7 @@ class ShoeDetailEncoder(ModelEncoder):
         "model_name",
         "color",
         "picture_url",
+        "id",
         "bin"
     ]
     encoders = {
