@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function HatList(props) {
+function HatList() {
   const [hats, setHats] = useState([])
 
   const getData = async () => {
@@ -45,7 +45,7 @@ function HatList(props) {
           </tr>
         </thead>
         <tbody>
-          {props.hats.map(hat => {
+          {hats.map(hat => {
             return (
               <tr key={hat.id}>
                 <td>{ hat.style_name }</td>
