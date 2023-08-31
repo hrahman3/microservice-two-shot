@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import Nav from './Nav';
 import HatList from './HatList';
+import HatForm from './HatForm';
 
 function App(props) {
   if (props.hats === undefined) {
@@ -15,7 +16,7 @@ function App(props) {
           <Route path="/" element={<MainPage />} />
           <Route path="hats">
               <Route index element={<HatList hats={props.hats} />} />
-              {/* <Route path="new" element={<HatForm />} /> */}
+              <Route path="new" element={<HatForm />} />
           </Route>
         </Routes>
       </div>
