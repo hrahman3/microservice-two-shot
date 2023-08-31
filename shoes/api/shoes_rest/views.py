@@ -1,12 +1,10 @@
 from django.shortcuts import render
-from django.shortcuts import render
 from common.json import ModelEncoder
 from .models import Shoe, BinVO
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 import json
 
-# Create your views here.
 
 class BinVODetailEncoder(ModelEncoder):
     model = BinVO
