@@ -10,7 +10,7 @@ function HatList(props) {
         <tbody>
           {props.hats.map(hat => {
             return (
-              <tr key={hat.image_url}>
+              <tr key={hat.id}>
                 <td>{ hat.style_name }</td>
                 <td>{ hat.location }</td>
               </tr>

@@ -27,6 +27,7 @@ class HatListEncoder(ModelEncoder):
         "color",
         "fabric",
         "location",
+        "id",
         ]
 
     def get_extra_data(self, o):
@@ -42,6 +43,7 @@ class HatDetailEncoder(ModelEncoder):
         "color",
         "fabric",
         "location",
+        "id",
     ]
     encoders = {
         "location": LocationVODetailEncoder(),
