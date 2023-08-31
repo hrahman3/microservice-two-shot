@@ -2,8 +2,8 @@
 
 Team:
 
-* Person 1 - Which microservice?
-* Francis Belza - Shoes microservice
+* Hamzah - Hats
+* Francis - Shoes
 
 ## Design
 
