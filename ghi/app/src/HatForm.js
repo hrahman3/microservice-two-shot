@@ -60,42 +60,42 @@ function HatForm() {
     });
   }
 
-  return (
-    <div className="row">
-      <div className="offset-3 col-6">
-        <div className="shadow p-4 mt-4">
-          <h1>Create a new Hat</h1>
-          <form onSubmit={handleSubmit} id="create-hat-form">
-                <div className="form-floating mb-3">
-                    <input onChange={handleFormChange} placeholder="Color" required type="text" name="Color" id="color" className="form-control" />
-                    <label htmlFor="name">Color</label>
-                </div>
-                <div className="form-floating mb-3">
-                    <input onChange={handleFormChange} placeholder="Fabric" required type="text" name="Fabric" id="fabric" className="form-control" />
-                    <label htmlFor="starts">Fabric</label>
-                </div>
-                <div className="form-floating mb-3">
-                    <input onChange={handleFormChange} placeholder="Style Name" required type="text" name="Name" id="style_name" className="form-control" />
-                    <label htmlFor="ends">Style Name</label>
-                </div>
-                <div className="form-floating mb-3">
-                        <input onChange={handleFormChange} placeholder="Image Url" required type="url" name="image_url" id="image_url" className="form-control" />
-                        <label htmlFor="image_url">Image Url</label>
-                        <select onChange={handleFormChange} required name="location" id="location"  className="form-select">
-                            <option value="">Choose a location</option>
-                            {locations.map(location => {
-                            return (
-                            <option key={location.id} value={location.id}>{location.name}</option>
-                            );
-                        })}
-                        </select>
-                </div>
-            <button className="btn btn-primary">Create</button>
-         </form>
-      </div>
+    return (
+        <div className="row">
+        <div className="offset-3 col-6">
+            <div className="shadow p-4 mt-4">
+            <h1>Create a new Hat</h1>
+            <form onSubmit={handleSubmit} id="create-hat-form">
+                    <div className="form-floating mb-3">
+                        <input onChange={handleFormChange} placeholder="Color" required type="text" name="Color" id="color" className="form-control" />
+                        <label htmlFor="color">Color</label>
+                    </div>
+                    <div className="form-floating mb-3">
+                        <input onChange={handleFormChange} placeholder="Fabric" required type="text" name="Fabric" id="fabric" className="form-control" />
+                        <label htmlFor="fabric">Fabric</label>
+                    </div>
+                    <div className="form-floating mb-3">
+                        <input onChange={handleFormChange} placeholder="Style Name" required type="text" name="Name" id="style_name" className="form-control" />
+                        <label htmlFor="style_name">Style Name</label>
+                    </div>
+                    <div className="form-floating mb-3">
+                            <input onChange={handleFormChange} placeholder="Image Url" required type="url" name="image_url" id="image_url" className="form-control" />
+                            <label htmlFor="image_url">Image Url</label>
+                            <select onChange={handleFormChange} required name="location" id="location"  className="form-select">
+                                <option value="">Choose a location</option>
+                                {locations.map(location => {
+                                return (
+                                <option key={location.id} value={location.id}>{location.name}</option>
+                                );
+                            })}
+                            </select>
+                    </div>
+                <button className="btn btn-primary">Create</button>
+            </form>
+        </div>
+        </div>
     </div>
-  </div>
-);
+    );
 }
 
 export default HatForm;
