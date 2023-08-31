@@ -67,21 +67,21 @@ function HatForm() {
             <h1>Create a new Hat</h1>
             <form onSubmit={handleSubmit} id="create-hat-form">
                     <div className="form-floating mb-3">
-                        <input onChange={handleFormChange} placeholder="Color" required type="text" name="color" id="color" className="form-control" />
+                        <input onChange={handleFormChange} value={formData.color} placeholder="Color" required type="text" name="color" id="color" className="form-control" />
                         <label htmlFor="color">Color</label>
                     </div>
                     <div className="form-floating mb-3">
-                        <input onChange={handleFormChange} placeholder="Fabric" required type="text" name="fabric" id="fabric" className="form-control" />
+                        <input onChange={handleFormChange} value={formData.fabric} placeholder="Fabric" required type="text" name="fabric" id="fabric" className="form-control" />
                         <label htmlFor="fabric">Fabric</label>
                     </div>
                     <div className="form-floating mb-3">
-                        <input onChange={handleFormChange} placeholder="Style Name" required type="text" name="style_name" id="style_name" className="form-control" />
+                        <input onChange={handleFormChange} value={formData.style_name} placeholder="Style Name" required type="text" name="style_name" id="style_name" className="form-control" />
                         <label htmlFor="style_name">Style Name</label>
                     </div>
                     <div className="form-floating mb-3">
-                            <input onChange={handleFormChange} placeholder="Image Url" required type="url" name="image_url" id="image_url" className="form-control" />
+                            <input onChange={handleFormChange} value={formData.image_url} placeholder="Image Url" required type="url" name="image_url" id="image_url" className="form-control" />
                             <label htmlFor="image_url">Image Url</label>
-                            <select onChange={handleFormChange} required name="location" id="location"  className="form-select">
+                            <select onChange={handleFormChange} value={formData.location} required name="location" id="location"  className="form-select">
                                 <option value="">Choose a location</option>
                                 {locations.map(location => {
                                 return (
